@@ -21,9 +21,12 @@ export default function Home() {
     fetchRandomQuote();
   }, []);
 
+  useEffect(() => {
+    setAuthorQuotes(false);
+  }, [quotes]);
+
   function handleRandomQuote() {
     fetchRandomQuote();
-    setAuthorQuotes(false);
   }
 
   function fetchAllQuote() {
